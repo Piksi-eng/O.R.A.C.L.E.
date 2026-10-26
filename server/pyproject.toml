@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dm-companion"
+version = "0.1.0"
+description = "Local server for the DM Companion: phone mics, recording, and later transcription."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "cryptography>=42",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+include = ["dm_companion*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
