@@ -1,4 +1,6 @@
-# DM Companion
+# O.R.A.C.L.E.
+
+**Omniscient Recorder And Campaign Lore Engine**
 
 An all-in-one tool for running D&D 5e at a real table. Every player's phone becomes a microphone,
 the session is transcribed live (Serbian and English mixed, the way we actually talk), and the tool
@@ -32,8 +34,8 @@ You need [Python 3.11+](https://www.python.org/downloads/) (tick "Add python.exe
 [Node.js LTS](https://nodejs.org/).
 
 ```powershell
-git clone <this repo> dm-companion
-cd dm-companion
+git clone https://github.com/Piksi-eng/O.R.A.C.L.E. oracle
+cd oracle
 powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
 powershell -ExecutionPolicy Bypass -File scripts\start.ps1
 ```
@@ -83,7 +85,7 @@ Phones always use the built app the Python server serves, so run `npm run build`
 ### Layout
 
 ```
-server/dm_companion/   Python backend (FastAPI)
+server/oracle/   Python backend (FastAPI)
   app.py               HTTP API and WebSockets (/ws/mic for phones, /ws/dm for the dashboard)
   session.py           Players at the table and the recording in progress
   audio.py             Loudness and the per-player WAV writer

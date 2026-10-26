@@ -6,10 +6,10 @@ import numpy as np
 import pytest
 from fastapi.testclient import TestClient
 
-from dm_companion.app import create_app
-from dm_companion.certs import _cert_covers, ensure_cert
-from dm_companion.config import Settings
-from dm_companion.session import SessionManager
+from oracle.app import create_app
+from oracle.certs import _cert_covers, ensure_cert
+from oracle.config import Settings
+from oracle.session import SessionManager
 
 
 @pytest.fixture

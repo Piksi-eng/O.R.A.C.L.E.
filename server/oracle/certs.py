@@ -37,7 +37,7 @@ def ensure_cert(cert_dir: Path, ips: list[str]) -> tuple[Path, Path]:
         return cert_path, key_path
 
     key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
-    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "DM Companion")])
+    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "O.R.A.C.L.E.")])
     now = datetime.datetime.now(datetime.timezone.utc)
     san = [x509.DNSName("localhost")] + [x509.IPAddress(ipaddress.ip_address(ip)) for ip in ips]
     cert = (

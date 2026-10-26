@@ -17,7 +17,7 @@ def main() -> None:
     app = create_app(settings, manager, join_url=join_url)
 
     print()
-    print("  DM Companion is running")
+    print("  O.R.A.C.L.E. is running")
     print(f"  Dashboard (this PC):  https://localhost:{settings.port}/dm")
     print(f"  Players (phones):     {join_url}")
     print("  Your browser warns about the certificate the first time: choose Advanced -> Proceed.")

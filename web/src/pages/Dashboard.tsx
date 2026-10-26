@@ -58,7 +58,7 @@ export default function Dashboard() {
   return (
     <main className="dashboard">
       <header>
-        <h1>DM Companion</h1>
+        <h1>O.R.A.C.L.E.</h1>
         <span className={online ? "ok" : "warn"}>{online ? "Server connected" : "Server offline"}</span>
       </header>
 

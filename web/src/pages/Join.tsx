@@ -8,8 +8,8 @@ type Phase = "setup" | "starting" | "live" | "error";
 const PING_INTERVAL_MS = 5000;
 
 export default function Join() {
-  const [name, setName] = useState(load("dmc.name"));
-  const [character, setCharacter] = useState(load("dmc.character"));
+  const [name, setName] = useState(load("oracle.name"));
+  const [character, setCharacter] = useState(load("oracle.character"));
   const [phase, setPhase] = useState<Phase>("setup");
   const [error, setError] = useState("");
   const [connected, setConnected] = useState(false);
@@ -20,8 +20,8 @@ export default function Join() {
   useEffect(() => () => stopRef.current?.(), []);
 
   async function join() {
-    save("dmc.name", name.trim());
-    save("dmc.character", character.trim());
+    save("oracle.name", name.trim());
+    save("oracle.character", character.trim());
     setPhase("starting");
     setError("");
     const id = playerId();

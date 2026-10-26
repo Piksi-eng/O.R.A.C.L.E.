@@ -18,10 +18,10 @@ export function save(key: string, value: string): void {
 
 /** A stable id per phone, so a reconnect is the same player rather than a new one. */
 export function playerId(): string {
-  let id = load("dmc.playerId");
+  let id = load("oracle.playerId");
   if (!id) {
     id = Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) => b.toString(16).padStart(2, "0")).join("");
-    save("dmc.playerId", id);
+    save("oracle.playerId", id);
   }
   return id;
 }

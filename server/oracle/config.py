@@ -2,7 +2,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-# server/dm_companion/config.py -> repo root
+# server/oracle/config.py -> repo root
 ROOT = Path(__file__).resolve().parents[2]
 
 # Phones send 16 kHz mono 16-bit PCM: what Whisper expects, and small enough for Wi-Fi.
@@ -20,8 +20,8 @@ class Settings:
 
 def load_settings() -> Settings:
     s = Settings()
-    if port := os.environ.get("DMC_PORT"):
+    if port := os.environ.get("ORACLE_PORT"):
         s.port = int(port)
-    if data := os.environ.get("DMC_DATA_DIR"):
+    if data := os.environ.get("ORACLE_DATA_DIR"):
         s.data_dir = Path(data)
     return s

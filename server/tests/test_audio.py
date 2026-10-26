@@ -2,8 +2,8 @@ import wave
 
 import numpy as np
 
-from dm_companion.audio import TrackWriter, rms_level
-from dm_companion.config import SAMPLE_RATE
+from oracle.audio import TrackWriter, rms_level
+from oracle.config import SAMPLE_RATE
 
 
 def pcm(samples: int, value: int = 1000) -> bytes:

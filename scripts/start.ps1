@@ -1,4 +1,4 @@
-# Starts the DM Companion server. Phones on the same Wi-Fi join through the address it prints.
+# Starts the O.R.A.C.L.E. server. Phones on the same Wi-Fi join through the address it prints.
 # Run from the repo root:  powershell -ExecutionPolicy Bypass -File scripts\start.ps1
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
@@ -14,4 +14,4 @@ if (-not (Test-Path "$root\web\dist\index.html")) {
 }
 
 Set-Location $root
-& $python -m dm_companion
+& $python -m oracle

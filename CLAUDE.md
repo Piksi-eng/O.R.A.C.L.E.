@@ -1,4 +1,4 @@
-# DM Companion: notes for Claude
+# O.R.A.C.L.E.: notes for Claude
 
 ## What this is
 
@@ -31,7 +31,7 @@ Keep raw per-player audio and timestamps; the experiments need them.
   the cloud.
 - LLM: hybrid, local via Ollama when it fits, cloud API for heavy jobs, switchable in one setting.
 - Phones join over the LAN; browsers require HTTPS for the microphone, so the server always runs
-  TLS with its own certificate (`server/dm_companion/certs.py`).
+  TLS with its own certificate (`server/oracle/certs.py`).
 
 ## Architecture
 

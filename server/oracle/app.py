@@ -11,7 +11,7 @@ from .session import SessionManager
 
 DASHBOARD_PUSH_INTERVAL_S = 0.1
 
-NOT_BUILT = """<!doctype html><meta charset="utf-8"><title>DM Companion</title>
+NOT_BUILT = """<!doctype html><meta charset="utf-8"><title>O.R.A.C.L.E.</title>
 <body style="font-family:sans-serif;background:#111;color:#eee;padding:2rem">
 <h1>The web app is not built yet</h1>
 <p>Run <code>npm install</code> and <code>npm run build</code> in the <code>web</code> folder,
@@ -19,7 +19,7 @@ or run <code>scripts\\setup.ps1</code>, then reload.</p></body>"""
 
 
 def create_app(settings: Settings, manager: SessionManager, join_url: str = "") -> FastAPI:
-    app = FastAPI(title="DM Companion")
+    app = FastAPI(title="O.R.A.C.L.E.")
     app.state.manager = manager
 
     @app.get("/api/info")
